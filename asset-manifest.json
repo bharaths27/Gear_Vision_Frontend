@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Gear_Vision_Frontend/static/css/main.42615423.css",
-    "main.js": "/Gear_Vision_Frontend/static/js/main.3ee377b9.js",
+    "main.js": "/Gear_Vision_Frontend/static/js/main.8bcd20b3.js",
     "static/js/453.670e15c7.chunk.js": "/Gear_Vision_Frontend/static/js/453.670e15c7.chunk.js",
     "index.html": "/Gear_Vision_Frontend/index.html",
     "main.42615423.css.map": "/Gear_Vision_Frontend/static/css/main.42615423.css.map",
-    "main.3ee377b9.js.map": "/Gear_Vision_Frontend/static/js/main.3ee377b9.js.map",
+    "main.8bcd20b3.js.map": "/Gear_Vision_Frontend/static/js/main.8bcd20b3.js.map",
     "453.670e15c7.chunk.js.map": "/Gear_Vision_Frontend/static/js/453.670e15c7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.42615423.css",
-    "static/js/main.3ee377b9.js"
+    "static/js/main.8bcd20b3.js"
   ]
 }
