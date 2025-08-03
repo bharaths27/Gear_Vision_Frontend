@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 
-// The brands array now only contains Audi
 const brands = [
   {
     id: 'audi',
@@ -21,22 +20,21 @@ function BrandCarSelection({ onCarSelect }) {
         className="flex overflow-x-auto gap-6 justify-center mb-6"
         style={{ padding: '10px' }}
       >
-        {/* The map is still here for potential future expansion */}
         {brands.map((brand) => (
           <div
             key={brand.id}
-            // The onClick is removed since there's only one option
             style={{
               cursor: 'default',
-              border: '2px solid #fff', // Always show Audi as selected
+              border: '2px solid #fff',
               padding: '10px',
               borderRadius: '8px',
               minWidth: '100px',
               textAlign: 'center',
             }}
           >
+            {/* UPDATED IMAGE PATH */}
             <img
-              src={brand.logo}
+              src={`${process.env.PUBLIC_URL}${brand.logo}`}
               alt={brand.name}
               style={{ width: '60px', height: '60px', objectFit: 'contain', margin: '0 auto' }}
             />
@@ -45,7 +43,6 @@ function BrandCarSelection({ onCarSelect }) {
         ))}
       </div>
 
-      {/* This section now always shows the models for the selected brand (Audi) */}
       <div style={{ minHeight: '50px' }}>
         {selectedBrand.cars.map((carName) => (
           <div
