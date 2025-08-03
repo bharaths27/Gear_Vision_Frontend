@@ -21,14 +21,17 @@ function App() {
     setCarData(null);
     setError(null);
 
-    // Simplified model path mapping
+    // Using process.env.PUBLIC_URL to get the correct path for deployed assets
     const modelPaths = {
-      'audi_A4': '/models/Audi_A4.glb', 'audi_A7': '/models/Audi_A7.glb', 'audi_R8': '/models/Audi_R8.glb',
-      'audi_RS 5': '/models/Audi_RS5.glb', 'audi_RS 6': '/models/Audi_RS6.glb',
+      'audi_A4': `${process.env.PUBLIC_URL}/models/Audi_A4.glb`, 
+      'audi_A7': `${process.env.PUBLIC_URL}/models/Audi_A7.glb`, 
+      'audi_R8': `${process.env.PUBLIC_URL}/models/Audi_R8.glb`,
+      'audi_RS 5': `${process.env.PUBLIC_URL}/models/Audi_RS5.glb`, 
+      'audi_RS 6': `${process.env.PUBLIC_URL}/models/Audi_RS6.glb`,
     };
     
     const urlKey = `${brandId}_${carName}`;
-    const modelKeyForMl = modelPaths[urlKey]?.split('/')[2].replace('.glb', '');
+    const modelKeyForMl = modelPaths[urlKey]?.split('/')[3].replace('.glb', ''); // Index is now 3
 
     setSelectedCarModelUrl(modelPaths[urlKey] || null);
     setSelectedCarModelName(modelKeyForMl || '');
