@@ -12,7 +12,7 @@ const brands = [
 ];
 
 function BrandCarSelection({ onCarSelect }) {
-  const [selectedBrand, setSelectedBrand] = useState(brands[0]); // Default to Audi selected
+  const [selectedBrand] = useState(brands[0]); // Default to Audi selected
 
   return (
     <div style={{ marginBottom: '20px', textAlign: 'center' }}>
@@ -32,7 +32,7 @@ function BrandCarSelection({ onCarSelect }) {
               textAlign: 'center',
             }}
           >
-            {/* UPDATED IMAGE PATH */}
+            {/* FINAL FIX: Correctly pathing the logo for deployment */}
             <img
               src={`${process.env.PUBLIC_URL}${brand.logo}`}
               alt={brand.name}
